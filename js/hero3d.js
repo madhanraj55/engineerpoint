@@ -41,79 +41,7 @@
     pv.position.set(5, -2, 4);
     S.add(pv);
 
-    const D = new THREE.Group();
-    const metal = new THREE.MeshStandardMaterial({ color: 0xaab4c4, metalness: 0.9, roughness: 0.3 });
-
-    const mon = new THREE.Mesh(new THREE.BoxGeometry(4.4, 2.6, 0.18), metal);
-    mon.position.y = 1.2;
-    D.add(mon);
-
-    const sc = document.createElement("canvas");
-    sc.width = 512;
-    sc.height = 300;
-    const sx = sc.getContext("2d");
-    const tex = new THREE.CanvasTexture(sc);
-
-    const screen = new THREE.Mesh(new THREE.PlaneGeometry(4.1, 2.3), new THREE.MeshBasicMaterial({ map: tex }));
-    screen.position.set(0, 1.2, 0.1);
-    D.add(screen);
-
-    const stand = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, 0.9), metal);
-    stand.position.y = -0.4;
-    D.add(stand);
-
-    const base = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 0.9, 0.08), metal);
-    base.position.y = -0.85;
-    D.add(base);
-
-    const kb = new THREE.Mesh(
-      new THREE.BoxGeometry(3, 0.1, 1),
-      new THREE.MeshStandardMaterial({ color: 0x10141c, metalness: 0.6, roughness: 0.4, emissive: 0x1677ff, emissiveIntensity: 0 })
-    );
-    kb.position.set(0, -1.1, 1.6);
-    D.add(kb);
-
-    const ms = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.1, 0.5), metal);
-    ms.position.set(2.1, -1.1, 1.6);
-    D.add(ms);
-
-    S.add(D);
-
-    const code = [
-      '<section class="hero">',
-      "const future = build();",
-      "def transform_business():",
-      "SELECT solutions FROM digital_future;",
-      "fun buildFuture() { }",
-      '<?php echo "Innovation"; ?>',
-      ".growth{animation:innovate}",
-      "React · Flutter · Java · API"
-    ];
-
-    const snips = code.map((t, i) => {
-      const c = document.createElement("canvas");
-      c.width = 512;
-      c.height = 64;
-      const x = c.getContext("2d");
-      x.fillStyle = "rgba(255,255,255,0.92)";
-      x.fillRect(0, 0, 512, 64);
-      x.strokeStyle = "#0265dc";
-      x.lineWidth = 3;
-      x.strokeRect(2, 2, 508, 60);
-      x.fillStyle = "#0f172a";
-      x.font = "bold 26px monospace";
-      x.fillText(t, 16, 41);
-
-      const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), transparent: true }));
-      sp.scale.set(3, 0.375, 1);
-      sp.userData = {
-        a: (i / code.length) * Math.PI * 2,
-        r: 6 + Math.random() * 3,
-        y: (Math.random() - 0.5) * 5
-      };
-      S.add(sp);
-      return sp;
-    });
+    // Clean particle constellation canvas without terminal monitor obstruction
 
     const tc = document.createElement("canvas");
     tc.width = 1400;
@@ -225,32 +153,6 @@
 
       cam.position.set(Math.sin(t * 0.3) * 0.3, 0.4, 9 - 5 * sm(0, 0.2, p) + 9 * sm(0.55, 0.85, p));
       cam.lookAt(0, 0.4, 0);
-
-      D.position.z = -6 * sm(0.62, 0.9, p);
-      D.position.y = -0.3 * conv;
-      D.rotation.y = Math.sin(t * 0.4) * 0.05;
-
-      kb.material.emissiveIntensity = on * 1.2;
-
-      sx.fillStyle = "#04101f";
-      sx.fillRect(0, 0, 512, 300);
-      sx.fillStyle = `rgba(0,160,255,${0.15 + 0.5 * on})`;
-      sx.fillRect(0, 0, 512, 300 * on);
-
-      sx.font = "16px monospace";
-      sx.fillStyle = "#9fe9ff";
-      for (let i = 0; i < 12; i++) {
-        sx.fillText(code[(i + ((t * 3) | 0)) % 8], 14, 24 + i * 22);
-      }
-      tex.needsUpdate = true;
-
-      snips.forEach((s) => {
-        const k = fly;
-        const a = s.userData.a + t * 0.6 * (1 - k) + k * 6;
-        const r = s.userData.r * (1 - k);
-        s.position.set(Math.cos(a) * r, s.userData.y * (1 - k) + 1.2 * k, Math.sin(a) * r * 0.6);
-        s.material.opacity = sm(0.14, 0.24, p) * (1 - sm(0.46, 0.52, p));
-      });
 
       const ar = g.attributes.position.array;
       const e = conv;

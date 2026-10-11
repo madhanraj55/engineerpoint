@@ -403,14 +403,17 @@ h3.cat {
 }
 
 .intro {
-  top: 55%;
-  margin-top: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 40px;
   z-index: 5;
 }
+
 @media(max-width:768px){
-  .intro{
-    top:50%;
-    margin-top:0px;
+  .intro {
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 30px;
   }
 }
 
