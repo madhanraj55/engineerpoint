@@ -9,10 +9,10 @@
   <meta property="og:description" content="Your Best Solution for the Digital Growth of Your Business.">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Orbitron & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
 
   <!-- Modular Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
@@ -83,17 +83,22 @@
       <p>EngineerPoint is a technology and digital solutions initiative focused on helping businesses establish, strengthen, and grow their digital presence. We combine creative thinking, software engineering, modern web technologies, and digital marketing to build solutions that address real business needs.</p>
       <div class="grid">
         <div class="card rv">
-          <div class="thumb">FOUNDER PHOTO PLACEHOLDER</div>
+          <div class="thumb">
+            <span style="font-size:38px;display:block;margin-bottom:6px;">👨‍💻</span>
+            FOUNDER PHOTO PLACEHOLDER
+          </div>
           <h3>Ramasudha</h3>
-          <p>Software Engineer · Founder<br>Established: September 2026</p>
+          <p>Software Engineer · Founder<br><span style="color:var(--cy);font-weight:600;">Established: September 2026</span></p>
         </div>
         <div class="card rv" id="vision">
-          <h3>Vision</h3>
-          <p>To make reliable, creative, and accessible digital solutions available to businesses of every size.</p>
+          <div class="svc-icon-badge">🔭</div>
+          <h3>Our Vision</h3>
+          <p>To make reliable, creative, high-impact and accessible digital solutions available to businesses of every size worldwide.</p>
         </div>
         <div class="card rv">
-          <h3>Mission</h3>
-          <p>To transform business ideas into practical digital products that improve visibility, customer engagement, efficiency, and long-term growth.</p>
+          <div class="svc-icon-badge">🎯</div>
+          <h3>Our Mission</h3>
+          <p>To transform business ideas into practical digital products that improve visibility, customer engagement, operational efficiency, and sustainable growth.</p>
         </div>
       </div>
     </section>
@@ -118,43 +123,83 @@
 
     <!-- Why Choose Us Section -->
     <section class="s" id="why">
+      <span class="lbl">WHY CHOOSE US</span>
       <h2 class="t">Technology With Purpose. Design With Impact.</h2>
-      <div class="orb" aria-hidden="true"></div>
+      <!-- Interactive Rotating Tech Globe -->
+      <div class="globe-wrap" aria-hidden="true">
+        <div class="globe-ring">
+          <span class="globe-tag" style="--i:0">AI &amp; ML</span>
+          <span class="globe-tag" style="--i:1">Cloud</span>
+          <span class="globe-tag" style="--i:2">React</span>
+          <span class="globe-tag" style="--i:3">Flutter</span>
+          <span class="globe-tag" style="--i:4">Node.js</span>
+          <span class="globe-tag" style="--i:5">DevOps</span>
+          <span class="globe-tag" style="--i:6">Python</span>
+          <span class="globe-tag" style="--i:7">UI/UX</span>
+        </div>
+        <div class="orb">
+          <div class="orb-core"></div>
+        </div>
+      </div>
       <div class="grid">
-        <div class="card rv">Business-Focused Solutions</div>
-        <div class="card rv">Modern Technology</div>
-        <div class="card rv">Responsive Design</div>
-        <div class="card rv">User-Centered Experiences</div>
-        <div class="card rv">Performance and Usability</div>
-        <div class="card rv">Scalable Digital Foundations</div>
+        <div class="card rv">
+          <div class="svc-icon-badge">💼</div>
+          <h3>Business-Focused Solutions</h3>
+          <p>Engineered to solve real business challenges, streamline operations, and boost bottom-line ROI.</p>
+        </div>
+        <div class="card rv">
+          <div class="svc-icon-badge">⚡</div>
+          <h3>Modern Technology Stack</h3>
+          <p>High-speed, future-proof architectures utilizing Next-gen frameworks, scalable cloud and AI.</p>
+        </div>
+        <div class="card rv">
+          <div class="svc-icon-badge">📱</div>
+          <h3>Responsive &amp; Adaptive Design</h3>
+          <p>Flawless pixel-perfect presentation across every smartphone, tablet, desktop, and large displays.</p>
+        </div>
+        <div class="card rv">
+          <div class="svc-icon-badge">🎯</div>
+          <h3>User-Centered Experiences</h3>
+          <p>Intuitive user interfaces that retain customer interest, lower bounce rates, and turn visitors into leads.</p>
+        </div>
+        <div class="card rv">
+          <div class="svc-icon-badge">🚀</div>
+          <h3>Performance &amp; Usability</h3>
+          <p>Blazing fast loading speeds, search engine optimization, and accessibility compliance built-in.</p>
+        </div>
+        <div class="card rv">
+          <div class="svc-icon-badge">🛡️</div>
+          <h3>Scalable Digital Foundations</h3>
+          <p>Robust enterprise security and modular codebase ready to seamlessly expand as your company grows.</p>
+        </div>
       </div>
     </section>
 
     <!-- Workflow Section -->
     <section class="s">
       <h2 class="t">Our Workflow</h2>
-      <div class="flow">
-        <div class="rv">
+      <div class="flow" id="workflowSteps">
+        <div class="flow-step" data-step="1">
           <h3>01 — Discover</h3>
           <p>Understand the business, audience, and goals.</p>
         </div>
-        <div class="rv">
+        <div class="flow-step" data-step="2">
           <h3>02 — Strategize</h3>
           <p>Plan the right digital approach.</p>
         </div>
-        <div class="rv">
+        <div class="flow-step" data-step="3">
           <h3>03 — Design</h3>
           <p>Develop the visual direction and user experience.</p>
         </div>
-        <div class="rv">
+        <div class="flow-step" data-step="4">
           <h3>04 — Build</h3>
           <p>Implement and test the solution.</p>
         </div>
-        <div class="rv">
+        <div class="flow-step" data-step="5">
           <h3>05 — Launch</h3>
           <p>Deploy the completed project.</p>
         </div>
-        <div class="rv">
+        <div class="flow-step" data-step="6">
           <h3>06 — Improve</h3>
           <p>Support future enhancements and improvements.</p>
         </div>
@@ -221,7 +266,7 @@
         </p>
         <p>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          <a href="tel:+919842568247">+91 98425 68247</a>
+          <a href="tel:+919842568247">+91 98425 68247 </a>
         </p>
         <p>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -230,30 +275,6 @@
       </div>
     </div>
 
-    <!-- Google Map Embed Card -->
-    <div class="footer-map-card">
-      <div class="footer-map-header">
-        <div>
-          <b>OUR LOCATION</b>
-          <span>W-3 ,5 Swamy Gulam 2nd Street, Near G.H, Chinnamanur</span>
-        </div>
-        <a class="btn ghost map-btn" href="https://www.google.com/maps/search/?api=1&amp;query=W-3+,5+Swamy+Gulam+2nd+Street,Near+G.H,+Chinnamanur" target="_blank" rel="noopener">
-          Open in Maps ↗
-        </a>
-      </div>
-      <div class="footer-map-wrap">
-        <iframe
-          title="EngineerPoint Location Map"
-          src="https://maps.google.com/maps?q=W-3%20,5%20Swamy%20Gulam%202nd%20Street,Near%20G.H,%20Chinnamanur&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-          width="100%"
-          height="280"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
 
     <p class="copyright">© 2026 EngineerPoint. All rights reserved.<br>Designed and engineered for digital growth.</p>
   </footer>

@@ -1,39 +1,57 @@
 // Project showcase data & filter logic
 const projects = [
   {
-    title: "Sample Business Website",
+    title: "Apex Cloud Enterprise Platform",
     category: "Websites",
-    description: "Placeholder: a modern website for a growing business.",
-    image: "",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    liveUrl: "",
+    description: "Modern, ultra-fast corporate digital presence with cloud architecture and SEO integration.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Next.js"],
+    liveUrl: "https://engineerpoint.com",
     githubUrl: ""
   },
   {
-    title: "Sample Web Application",
+    title: "OmniFlow Logistics SaaS",
     category: "Web Applications",
-    description: "Placeholder: a custom platform built around business needs.",
-    image: "",
-    technologies: ["React", "Node", "MySQL"],
-    liveUrl: "",
+    description: "Enterprise operations management dashboard with live real-time analytics and inventory tracking.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    technologies: ["React", "Node.js", "PostgreSQL", "Tailwind"],
+    liveUrl: "https://engineerpoint.com",
     githubUrl: ""
   },
   {
-    title: "Sample Mobile App",
+    title: "PulseFit Health & Wellness App",
     category: "Mobile Apps",
-    description: "Placeholder: an Android / cross-platform app.",
-    image: "",
-    technologies: ["Flutter", "Kotlin"],
-    liveUrl: "",
+    description: "Cross-platform mobile application featuring daily goal telemetry, biometric sync, and workout plans.",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
+    technologies: ["Flutter", "Dart", "Firebase", "REST API"],
+    liveUrl: "https://engineerpoint.com",
     githubUrl: ""
   },
   {
-    title: "Sample UI/UX Concept",
+    title: "FinTech NeoBank Interface",
     category: "UI/UX Design",
-    description: "Placeholder: interface design and user flows.",
-    image: "",
-    technologies: ["Figma"],
-    liveUrl: "",
+    description: "Next-generation banking experience, design systems, interactive transaction flows and prototyping.",
+    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80",
+    technologies: ["Figma", "Design Systems", "Prototyping"],
+    liveUrl: "https://engineerpoint.com",
+    githubUrl: ""
+  },
+  {
+    title: "Global Reach Marketing Engine",
+    category: "Digital Marketing",
+    description: "Multi-channel PPC and performance marketing campaign system driving verified conversion growth.",
+    image: "https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=800&q=80",
+    technologies: ["Google Ads", "Meta Ads", "Analytics", "SEO"],
+    liveUrl: "https://engineerpoint.com",
+    githubUrl: ""
+  },
+  {
+    title: "Aura Commerce Storefront",
+    category: "Websites",
+    description: "High-performance headless eCommerce platform with frictionless checkout and product discoverability.",
+    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80",
+    technologies: ["Shopify", "Liquid", "React", "Stripe"],
+    liveUrl: "https://engineerpoint.com",
     githubUrl: ""
   }
 ];

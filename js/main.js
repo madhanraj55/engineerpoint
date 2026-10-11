@@ -45,6 +45,28 @@
 
   document.querySelectorAll(".rv").forEach((n) => io.observe(n));
 
+  // Sequential 1-second step-by-step reveal for workflow
+  const wfContainer = document.getElementById("workflowSteps");
+  if (wfContainer) {
+    const wfObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            obs.unobserve(entry.target);
+            const steps = entry.target.querySelectorAll(".flow-step");
+            steps.forEach((step, index) => {
+              setTimeout(() => {
+                step.classList.add("in");
+              }, index * 1000); // 1-second gap per step (0s, 1s, 2s, 3s, 4s, 5s)
+            });
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    wfObserver.observe(wfContainer);
+  }
+
   // Contact form submission logic
   const f = document.getElementById("enq");
   const s = document.getElementById("status");

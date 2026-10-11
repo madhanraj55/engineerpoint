@@ -70,9 +70,8 @@
   SERVICES.forEach(function (c) {
     const id = "svc-" + slug(c[0]);
     h += '<h3 class="cat" id="' + id + '">' + esc(c[0]) + '</h3><div class="grid">';
-    m += '<div><h4><a href="#' + id + '">' + esc(c[0]) + '</a></h4>';
+    m += '<a class="mega-head-link" href="#' + id + '"><span>' + c[1] + '</span> ' + esc(c[0]) + '</a>';
     c[2].forEach(function (x) {
-      m += '<a href="#' + id + '">' + esc(x[0]) + '</a>';
       if (seen[x[0]]) return;
       seen[x[0]] = 1;
       h += '<div class="svc rv"><i>' + c[1] + '</i><h3>' + esc(x[0]) + '</h3><p>' + esc(x[1]) + '</p><a href="#contact" data-svc="' + esc(x[0]) + '">Explore Service</a></div>';
@@ -83,7 +82,6 @@
       }
     });
     h += '</div>';
-    m += '</div>';
   });
 
   if (wrap) wrap.innerHTML = h;

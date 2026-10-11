@@ -1,4 +1,4 @@
-// 3D Three.js & GSAP Hero Animation
+
 (function () {
   function main() {
     const hero = document.getElementById("hero");
@@ -95,13 +95,14 @@
       c.width = 512;
       c.height = 64;
       const x = c.getContext("2d");
-      x.fillStyle = "rgba(5,15,35,.8)";
+      x.fillStyle = "rgba(255,255,255,0.92)";
       x.fillRect(0, 0, 512, 64);
-      x.strokeStyle = "#00d9ff";
-      x.strokeRect(1, 1, 510, 62);
-      x.fillStyle = "#7fe7ff";
-      x.font = "26px monospace";
-      x.fillText(t, 14, 40);
+      x.strokeStyle = "#0265dc";
+      x.lineWidth = 3;
+      x.strokeRect(2, 2, 508, 60);
+      x.fillStyle = "#0f172a";
+      x.font = "bold 26px monospace";
+      x.fillText(t, 16, 41);
 
       const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), transparent: true }));
       sp.scale.set(3, 0.375, 1);
@@ -152,7 +153,9 @@
       B[i * 3 + 1] = q[1] + 0.5;
       B[i * 3 + 2] = (Math.random() - 0.5) * 0.5;
 
-      const c = new THREE.Color().setHSL(0.58 + Math.random() * 0.15, 1, 0.6);
+      // High-contrast vibrant royal blue, electric cyan, and purple against light background
+      const hue = (Math.random() < 0.6) ? (0.58 + Math.random() * 0.08) : (0.74 + Math.random() * 0.08);
+      const c = new THREE.Color().setHSL(hue, 1, 0.45);
       col.set([c.r, c.g, c.b], i * 3);
     }
 
@@ -163,10 +166,10 @@
     const cloud = new THREE.Points(
       g,
       new THREE.PointsMaterial({
-        size: 0.05,
+        size: mobile ? 0.075 : 0.065,
         vertexColors: true,
         transparent: true,
-        blending: THREE.AdditiveBlending,
+        opacity: 0.85,
         depthWrite: false
       })
     );
